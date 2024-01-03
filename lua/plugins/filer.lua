@@ -7,13 +7,13 @@ return {
       {
         "<leader>nn",
         function()
-          require("neo-tree.command").execute({ toggle = true, position = "float", dir = vim.loop.cwd() })
+          require("neo-tree.command").execute({ toggle = true, position = "left", dir = vim.loop.cwd() })
         end,
       },
       {
         "<leader>ng",
         function()
-          require("neo-tree.command").execute({ source = "git_status", position = "float", toggle = true })
+          require("neo-tree.command").execute({ source = "git_status", position = "left", toggle = true })
         end,
       },
     },

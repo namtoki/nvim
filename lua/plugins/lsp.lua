@@ -1,1 +1,5 @@
-return {}
+return {
+  {
+    "peterhoeg/vim-qml",
+  },
+}

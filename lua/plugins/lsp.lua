@@ -8,4 +8,5 @@ return {
       autoformat = false,
     },
   },
+  { "headlines.nvim", enabled = false },
 }

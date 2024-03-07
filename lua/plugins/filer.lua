@@ -45,6 +45,9 @@ return {
       {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "make",
+        config = function()
+          require("telescope").load_extension("fzf")
+        end,
       },
       "nvim-telescope/telescope-file-browser.nvim",
     },
@@ -134,7 +137,6 @@ return {
         },
       }
       telescope.setup(opts)
-      require("telescope").load_extension("fzf")
       require("telescope").load_extension("file_browser")
       require("telescope").load_extension("projects")
     end,

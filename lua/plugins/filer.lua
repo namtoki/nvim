@@ -165,7 +165,7 @@ return {
     },
     opts = {
       options = {
-        separator_style = "slant",
+        separator_style = "thin",
         hover = {
           enabled = true,
           delay = 200,

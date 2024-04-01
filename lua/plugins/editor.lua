@@ -1,6 +1,9 @@
 return {
   {
-    "yuttie/comfortable-motion.vim",
+    "karb94/neoscroll.nvim",
+    config = function()
+      require("neoscroll").setup({})
+    end,
   },
   {
     "norcalli/nvim-colorizer.lua",

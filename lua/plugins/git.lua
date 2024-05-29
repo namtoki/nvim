@@ -1,12 +1,11 @@
 return {
   {
-    "dinhhuy258/git.nvim",
-    event = "BufReadPre",
-    opts = {
-      keymaps = {
-        blame = "<Leader>gb",
-        browse = "<Leader>go",
-      },
+    "FabijanZulj/blame.nvim",
+    keys = {
+      { "<leader>b", "<cmd>BlameToggle<cr>", desc = "toggle Blame" },
     },
+    config = function(_, opts)
+      require("blame").setup(opts)
+    end,
   },
 }

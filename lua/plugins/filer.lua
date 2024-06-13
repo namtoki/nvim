@@ -7,6 +7,20 @@ return {
       window = {
         width = 25,
       },
+      filesystem = {
+        filtered_items = {
+          visible = true,
+          show_hidden_count = true,
+          hide_dotfiles = false,
+          hide_gitignored = false,
+          hide_by_name = {
+            -- '.git',
+            -- '.DS_Store',
+            -- 'thumbs.db',
+          },
+          never_show = {},
+        },
+      },
     },
     keys = {
       {
@@ -100,6 +114,12 @@ return {
         winblend = 0,
         mappings = {
           n = {},
+        },
+        file_ignore_patterns = {
+          "ls_main/*",
+          "m_amp_main",
+          "sub_fy23_cy23_24/*",
+          "vc_project/*",
         },
       })
       opts.pickers = {

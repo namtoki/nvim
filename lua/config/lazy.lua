@@ -29,7 +29,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.editor.navic" },
     { import = "lazyvim.plugins.extras.ui.treesitter-context" },
-    { import = "lazyvim.plugins.extras.ui.mini-animate" },
     { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
     -- import/override with your plugins
     { import = "plugins" },

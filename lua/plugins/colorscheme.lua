@@ -9,24 +9,32 @@ return {
       undercurl = true,
       commentStyle = { italic = true },
       functionStyle = {},
-      keywordStyle = { italic = true},
+      keywordStyle = { italic = true },
       statementStyle = { bold = true },
       typeStyle = {},
       transparent = true,
       dimInactive = false,
       terminalColors = true,
       colors = {
-          palette = {},
-          theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+        palette = {},
+        theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
       },
       overrides = function(colors)
-          return {}
+        return {}
       end,
       theme = "wave",
       background = {
-          dark = "wave",
-          light = "lotus"
+        dark = "wave",
+        light = "lotus",
       },
-    }
-  }
+    },
+  },
+  {
+    "diegoulloao/neofusion.nvim",
+    priority = 1000,
+    config = true,
+    opts = {
+      transparent_mode = true,
+    },
+  },
 }

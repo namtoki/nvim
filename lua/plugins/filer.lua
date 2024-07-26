@@ -119,6 +119,7 @@ return {
           "ls_main/*",
           "m_amp_main",
           "sub_fy23_cy23_24/*",
+          "sys_main/*",
           "vc_project/*",
         },
       })

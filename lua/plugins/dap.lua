@@ -5,7 +5,43 @@ return {
   {
     "mfussenegger/nvim-dap",
     event = "VeryLazy",
-
+    keys = {
+      {
+        "<F5>",
+        function()
+          require("dap").continue()
+        end,
+        desc = "Continue",
+      },
+      {
+        "<F8>",
+        function()
+          require("dap").run_last()
+        end,
+        desc = "Run Last",
+      },
+      {
+        "<F10>",
+        function()
+          require("dap").step_over()
+        end,
+        desc = "Step Over",
+      },
+      {
+        "<F11>",
+        function()
+          require("dap").step_into()
+        end,
+        desc = "Step Into",
+      },
+      {
+        "<F12>",
+        function()
+          require("dap").step_out()
+        end,
+        desc = "Step Out",
+      },
+    },
     opts = function()
       local dap = require("dap")
       local dapui = require("dapui")
@@ -29,19 +65,12 @@ return {
           end,
           useExtendedRemote = true,
           miDebuggerServerAddress = function()
-            return vim.fn.input("Server address: ", "192.168.0.28:10000")
+            return vim.fn.input("Server address: ", "192.168.0.168:10000")
           end,
           processId = function()
-            return vim.fn.input("Process ID: ", "2066")
+            return vim.fn.input("Process ID: ", "113")
           end,
           miDebuggerPath = "${workspaceFolder}/build70/exports/arm-aios93mllib32-linux-gnueabi-release/sysroots/x86_64-oesdk-linux/usr/bin/arm-aios93mllib32-linux-gnueabi/arm-aios93mllib32-linux-gnueabi-gdb",
-          --miDebuggerPath = function()
-          --  return require("dap.utils").pick_file({
-          --    filter = ".gdb",
-          --    executables = false,
-          --    path = "/home/work/theos/heos/build70/exports",
-          --  })
-          --end,
           setupCommands = {
             {
               text = "set sysroot ${workspaceFolder}/build70/exports/arm-aios93mllib32-linux-gnueabi-release/cache/debug_stage/DENON-DWS_70-SERIES_DEV",

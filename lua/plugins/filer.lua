@@ -169,16 +169,6 @@ return {
   },
   {
     "kazhala/close-buffers.nvim",
-    keys = {
-      {
-        "<leader>d",
-        function()
-          require("close_buffers").delete({
-            type = "this",
-          })
-        end,
-      },
-    },
   },
   {
     "akinsho/bufferline.nvim",

@@ -5,7 +5,7 @@ return {
     cmd = "Neotree",
     opts = {
       window = {
-        width = 25,
+        width = 45,
       },
       filesystem = {
         filtered_items = {

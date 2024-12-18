@@ -1,11 +1,5 @@
 return {
   {
-    "karb94/neoscroll.nvim",
-    config = function()
-      require("neoscroll").setup({})
-    end,
-  },
-  {
     "norcalli/nvim-colorizer.lua",
   },
   {
@@ -125,5 +119,11 @@ return {
     opts = {
       -- Add user configuration here
     },
+  },
+  {
+    "aklt/plantuml-syntax",
+  },
+  {
+    "weirongxu/plantuml-previewer.vim",
   },
 }

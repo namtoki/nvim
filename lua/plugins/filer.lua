@@ -83,7 +83,7 @@ return {
       {
         "<leader>g",
         function()
-          require("telescope.builtin").live_grep()
+          require("telescope.builtin").live_grep({ cwd = vim.fn.getcwd() })
         end,
       },
       -- {

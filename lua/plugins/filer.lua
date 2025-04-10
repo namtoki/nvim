@@ -72,16 +72,17 @@ return {
     },
     keys = {
       {
-        "<leader>f",
+        "<leader><Space>",
         function()
           require("telescope.builtin").find_files({
             no_ignore = false,
             hidden = false,
+            cwd = vim.fn.getcwd(),
           })
         end,
       },
       {
-        "<leader>g",
+        "<leader>/",
         function()
           require("telescope.builtin").live_grep({ cwd = vim.fn.getcwd() })
         end,

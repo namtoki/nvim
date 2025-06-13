@@ -1,43 +1,5 @@
 return {
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    cmd = "Neotree",
-    opts = {
-      window = {
-        width = 45,
-      },
-      filesystem = {
-        filtered_items = {
-          visible = true,
-          show_hidden_count = true,
-          hide_dotfiles = false,
-          hide_gitignored = false,
-          hide_by_name = {
-            -- '.git',
-            -- '.DS_Store',
-            -- 'thumbs.db',
-          },
-          never_show = {},
-        },
-      },
-    },
-    keys = {
-      {
-        "<leader>nn",
-        function()
-          require("neo-tree.command").execute({ toggle = true, position = "left", dir = vim.loop.cwd() })
-        end,
-      },
-      {
-        "<leader>ng",
-        function()
-          require("neo-tree.command").execute({ source = "git_status", position = "left", toggle = true })
-        end,
-      },
-    },
-  },
-  {
     "ahmedkhalf/project.nvim",
     opts = {
       manual_mode = true,

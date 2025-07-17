@@ -20,7 +20,29 @@ return {
         theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
       },
       overrides = function(colors)
-        return {}
+        return {
+          -- Make neo-tree background transparent
+          NeoTreeNormal = { bg = "NONE" },
+          NeoTreeNormalNC = { bg = "NONE" },
+          NeoTreeEndOfBuffer = { bg = "NONE" },
+          NeoTreeVertSplit = { bg = "NONE" },
+          NeoTreeWinSeparator = { bg = "NONE" },
+          NeoTreeStatusLine = { bg = "NONE" },
+          NeoTreeStatusLineNC = { bg = "NONE" },
+          -- Markdown heading colors for better visibility
+          RenderMarkdownH1 = { fg = "#ff6e67", bold = true },
+          RenderMarkdownH2 = { fg = "#ffa066", bold = true },
+          RenderMarkdownH3 = { fg = "#e6c384", bold = true },
+          RenderMarkdownH4 = { fg = "#9ece6a", bold = true },
+          RenderMarkdownH5 = { fg = "#7dcfff", bold = true },
+          RenderMarkdownH6 = { fg = "#bb9af7", bold = true },
+          RenderMarkdownH1Bg = { bg = "#2a2a37" },
+          RenderMarkdownH2Bg = { bg = "#2a2a37" },
+          RenderMarkdownH3Bg = { bg = "#2a2a37" },
+          RenderMarkdownH4Bg = { bg = "#2a2a37" },
+          RenderMarkdownH5Bg = { bg = "#2a2a37" },
+          RenderMarkdownH6Bg = { bg = "#2a2a37" },
+        }
       end,
       theme = "wave",
       background = {

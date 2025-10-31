@@ -42,6 +42,10 @@ return {
           RenderMarkdownH4Bg = { bg = "NONE" },
           RenderMarkdownH5Bg = { bg = "NONE" },
           RenderMarkdownH6Bg = { bg = "NONE" },
+          -- Markdown inline highlight (yellow marker)
+          RenderMarkdownInlineHighlight = { bg = "#ffff00", fg = "#000000", bold = true },
+          -- Markdown inline highlight (red marker)
+          RenderMarkdownInlineHighlightRed = { bg = "#ff6b6b", fg = "#000000", bold = true },
         }
       end,
       theme = "wave",
@@ -70,6 +74,14 @@ return {
       checkbox = {
         custom = {
           important = { raw = "[~]", rendered = "󰓎 ", highlight = "DiagnosticWarn" },
+        },
+      },
+      inline_highlight = {
+        enabled = true,
+        -- Markdown highlight syntax: ==text== (yellow), ==!text== (red)
+        highlight = "RenderMarkdownInlineHighlight",
+        custom = {
+          red = { prefix = "!", highlight = "RenderMarkdownInlineHighlightRed" },
         },
       },
       heading = {
